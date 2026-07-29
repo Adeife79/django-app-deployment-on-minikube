@@ -14,6 +14,7 @@ This project demonstartes a practical workflow for integrating AWS container reg
 - Terraform
 
 ## Project Structure
+```
 Application-deploy
 ├──API
 |   ├── API
@@ -32,6 +33,7 @@ Application-deploy
 │   ├── deployment.yml
 │   └── service.yml
 └── README.md
+```
 
 ## Local Set Up
 Below are the steps followed to set up and successfully deploy this web application:
