@@ -3,5 +3,5 @@ env/
 .terraform.lock.hcl
 .github/
 terraform.tfstate
-ecr-secret.yml
+k8s/ecr-secret.yml
 db.sqlite3
