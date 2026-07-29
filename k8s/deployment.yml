@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voters-api-deployment
+  labels:
+    apps: voters-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: voters-api
+  template:
+    metadata:
+      labels:
+        app: voters-api
+    spec:
+      containers:
+        - name: voters-api
+          image: 779035456626.dkr.ecr.eu-north-1.amazonaws.com/voters-api:v1
+          ports:
+            - containerPort: 8090
+      
+          
+
+
+    

@@ -1,0 +1,7 @@
+env/
+.terraform
+.terraform.lock.hcl
+.github/
+terraform.tfstate
+ecr-secret.yml
+db.sqlite3
