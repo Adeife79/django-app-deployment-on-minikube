@@ -40,7 +40,7 @@ Below are the steps followed to set up and successfully deploy this web applicat
 
 1. Clone the repository:
 ```bash
-git clone <repo_url>
+git clone https://github.com/Adeife79/django-app-deployment-on-minikube.git
 ```
 
 2. In local terminal, change directory to Infrastructure folder:
