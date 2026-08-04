@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-        bucket = "voters-api-tf-state"
+        bucket = <bucket_name>
         key    = "terraform.tfstate"
         region = "eu-north-1"
     }
