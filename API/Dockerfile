@@ -6,10 +6,7 @@ RUN pip install --no-cache-dir --upgrade pip
 
 RUN apt-get update && \
     apt-get -y install gcc libpq-dev && \
-    apt-get install -y cloud-init && \
-    apt-get install -y command-not-found && \
     rm -rf /var/lib/apt/lists/*
-
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
