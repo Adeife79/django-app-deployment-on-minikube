@@ -1,1 +1,1 @@
-repository_name = "voters-api"
+repository_name = "voters-app"

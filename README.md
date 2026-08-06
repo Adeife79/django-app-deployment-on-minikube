@@ -16,10 +16,9 @@ This project demonstrates a practical workflow for integrating AWS container reg
 ## Project Structure
 ```
 Application-deploy
-├──API
-|   ├── API
+├──voters-app
+|   ├── config
 |   ├── Core
-|   ├── db.sqlite3
 |   ├── Dockerfile
 │   ├── manage.py
 │   └── requirements.txt
@@ -35,7 +34,7 @@ Application-deploy
 └── README.md
 ```
 
-## Local Set Up
+## Setup
 Below are the steps followed to set up and successfully deploy this web application:
 
 1. Clone the repository:
@@ -43,14 +42,14 @@ Below are the steps followed to set up and successfully deploy this web applicat
 git clone https://github.com/Adeife79/django-app-deployment-on-minikube.git
 ```
 
-2. In local terminal, change directory to Infrastructure folder:
-```bash
-cd Infrastructure
-```
-
-3. Authenticate into AWS Account:
+2.  Authenticate into AWS Account:
 ```bash
 aws configure
+```
+
+3. In local terminal, change directory to Infrastructure folder:
+```bash
+cd Infrastructure
 ```
 
 4. Initialize and apply terraform:
@@ -69,7 +68,7 @@ docker tag <image_name>:tag <account_id>.dkr.ecr.<aws_region>.amazonaws.com/<ima
 docker push <account_id>.dkr.ecr.<aws_region>.amazonaws.com/<image_name>:tag
 ```
 
-6. Navigate to the k8s directory and create Kubernetes Secret:
+6. Navigate to the k8s directory and create Kubernetes secret:
 ```bash
 kubectl create secret docker-registry ecr-secret \
   --docker-server=<account-id>.dkr.ecr.<region>.amazonaws.com \
